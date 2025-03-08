@@ -1,0 +1,24 @@
+{
+  "name": "@ellementul/uee-transport-peerjs",
+  "version": "1.0.0",
+  "description": "Transport to use in UEE",
+  "main": "index.js",
+  "scripts": {
+    "test": "npx parcel ./browser.tests/transport",
+    "test:member": "npx parcel ./browser.tests/member"
+  },
+  "author": "Ellementul",
+  "license": "MIT",
+  "dependencies": {
+    "@ellementul/uee-core": "^7.2.0",
+    "peers": "^0.1.0",
+    "sinon": "^19.0.2"
+  },
+  "devDependencies": {
+    "assert": "^2.1.0",
+    "buffer": "^6.0.3",
+    "process": "^0.11.10",
+    "timers-browserify": "^2.0.12",
+    "util": "^0.12.5"
+  }
+}
