@@ -29,7 +29,8 @@ export async function runTests() {
 
     room.subscribe(secondEvent, callback)
 
-    room.subscribe(connectionEvent, async () => {
+    room.subscribe(connectionEvent, async ({ isHost }) => {
+        assertLog("Host connected", isHost)
         assertLog("Host send message", true)
         room.send(event)
 
@@ -38,7 +39,7 @@ export async function runTests() {
         assertLog("Host got message", callback.called)
     })
 
-    room.subscribe(disconnectionEvent, async () => {
-        assertLog("Host disconnected", true)
+    room.subscribe(disconnectionEvent, async ({ isHost }) => {
+        assertLog("Host disconnected", isHost)
     })
 }
