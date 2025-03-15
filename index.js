@@ -18,7 +18,7 @@ export class PeerJsTransport {
             this.peer.on("connection", conn => this.afterConnection(conn))
         else
             setTimeout(()=> {
-                const conn = this.peer.connect(this.id)
+                const conn = this.peer.connect(this.id, { reliable: true })
                 this.afterConnection(conn)
             }, 1000)
     }
