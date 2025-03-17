@@ -6,7 +6,8 @@
   "scripts": {
     "test": "npx parcel ./browser.tests/transport",
     "test:member": "npx parcel ./browser.tests/member",
-    "test:loading": "npx parcel ./browser.tests/loading"
+    "test:loading": "npx parcel ./browser.tests/loading",
+    "test:risk": "npx parcel ./browser.tests/risk"
   },
   "author": "Ellementul",
   "license": "MIT",
